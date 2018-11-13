@@ -18,6 +18,8 @@ namespace ComputerGraphics8
             }
         }
 
+
+
         private Camera camera;
 
         public Form1()
@@ -127,6 +129,7 @@ namespace ComputerGraphics8
 
         private void ApplyPrimitive_Click(object sender, EventArgs e)
         {
+            sceneView1.without_colors = false;
             switch(PrimitiveComboBox.SelectedItem.ToString())
             {
                 case "Тетраэдр":
@@ -186,6 +189,16 @@ namespace ComputerGraphics8
             sceneView1.Refresh();
 
 
+        }
+
+        private void DrawWithoutColors_Click(object sender, EventArgs e)
+        {
+            double vi = (double)numericUpDown10.Value;
+            double vj = (double)numericUpDown11.Value;
+            double vk = (double)numericUpDown12.Value;
+            Current_primitive.View = new Vector(vi, vj, vk);
+            sceneView1.without_colors = true;
+            sceneView1.Refresh();
         }
     }
 }

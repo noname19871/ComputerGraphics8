@@ -51,7 +51,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ApplyPrimitive = new System.Windows.Forms.Button();
+            this.DrawWithoutColors = new System.Windows.Forms.Button();
             this.sceneView1 = new ComputerGraphics8.SceneView();
+            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -61,6 +65,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown1
@@ -433,6 +440,16 @@
             this.ApplyPrimitive.UseVisualStyleBackColor = true;
             this.ApplyPrimitive.Click += new System.EventHandler(this.ApplyPrimitive_Click);
             // 
+            // DrawWithoutColors
+            // 
+            this.DrawWithoutColors.Location = new System.Drawing.Point(988, 534);
+            this.DrawWithoutColors.Name = "DrawWithoutColors";
+            this.DrawWithoutColors.Size = new System.Drawing.Size(258, 78);
+            this.DrawWithoutColors.TabIndex = 24;
+            this.DrawWithoutColors.Text = "Нарисовать с отсечением граней";
+            this.DrawWithoutColors.UseVisualStyleBackColor = true;
+            this.DrawWithoutColors.Click += new System.EventHandler(this.DrawWithoutColors_Click);
+            // 
             // sceneView1
             // 
             this.sceneView1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -444,11 +461,99 @@
             this.sceneView1.Text = "sceneView1";
             this.sceneView1.ViewCamera = null;
             // 
+            // numericUpDown10
+            // 
+            this.numericUpDown10.DecimalPlaces = 1;
+            this.numericUpDown10.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown10.Location = new System.Drawing.Point(988, 618);
+            this.numericUpDown10.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown10.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown10.Name = "numericUpDown10";
+            this.numericUpDown10.Size = new System.Drawing.Size(82, 26);
+            this.numericUpDown10.TabIndex = 27;
+            this.numericUpDown10.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown11
+            // 
+            this.numericUpDown11.DecimalPlaces = 1;
+            this.numericUpDown11.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown11.Location = new System.Drawing.Point(1076, 618);
+            this.numericUpDown11.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown11.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown11.Name = "numericUpDown11";
+            this.numericUpDown11.Size = new System.Drawing.Size(82, 26);
+            this.numericUpDown11.TabIndex = 26;
+            this.numericUpDown11.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown12
+            // 
+            this.numericUpDown12.DecimalPlaces = 1;
+            this.numericUpDown12.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown12.Location = new System.Drawing.Point(1164, 618);
+            this.numericUpDown12.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown12.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown12.Name = "numericUpDown12";
+            this.numericUpDown12.Size = new System.Drawing.Size(82, 26);
+            this.numericUpDown12.TabIndex = 25;
+            this.numericUpDown12.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.Controls.Add(this.numericUpDown10);
+            this.Controls.Add(this.numericUpDown11);
+            this.Controls.Add(this.numericUpDown12);
+            this.Controls.Add(this.DrawWithoutColors);
             this.Controls.Add(this.ApplyPrimitive);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -490,6 +595,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,6 +629,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button ApplyPrimitive;
+        private System.Windows.Forms.Button DrawWithoutColors;
+        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown numericUpDown12;
     }
 }
 

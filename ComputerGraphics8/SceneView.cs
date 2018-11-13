@@ -8,6 +8,10 @@ namespace ComputerGraphics8
         public Camera ViewCamera { get; set; }
         public Primitive current_primitive { get; set; }
 
+        public bool without_colors = false;
+
+        public Vector View { get; set; }
+
         public SceneView() : base()
         {
             var flags = ControlStyles.AllPaintingInWmPaint
@@ -51,7 +55,10 @@ namespace ComputerGraphics8
             graphics3D.DrawLine(new Vector(0, 0, 0), z, new Pen(Color.Blue, 2));
             graphics3D.DrawPoint(z, Color.Blue);
 
-            current_primitive.Draw(graphics3D);
+            if (without_colors)
+                current_primitive.Draw_without_colors(graphics3D);
+            else
+                current_primitive.Draw(graphics3D);
             e.Graphics.DrawImage(graphics3D.ColorBuffer, 0, 0);
         }
     }
