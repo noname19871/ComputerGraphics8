@@ -26,7 +26,7 @@ namespace ComputerGraphics8
 
             for (int j = 0; j < (int)Math.Ceiling(Height); ++j)
                 for (int i = 0; i < (int)Math.Ceiling(Width); ++i)
-                    ZBuffer[i, j] = double.MinValue;
+                    ZBuffer[i, j] = double.MaxValue;
 
         }
 
@@ -172,13 +172,12 @@ namespace ComputerGraphics8
 
                     Interpolate(left, right, (x - left.Coordinate.X) / (right.Coordinate.X - left.Coordinate.X), ref point);
 
-                    if (point.Coordinate.Z > 1 || point.Coordinate.Z < -1)
-                        continue;
+					if (point.Coordinate.Z > 1 || point.Coordinate.Z < -1)
+						continue;
 
-                    if (point.Coordinate.Z > ZBuffer[(int)x, (int)y])
+					if (point.Coordinate.Z < ZBuffer[(int)x, (int)y])
                     {
-                        ZBuffer[(int)x, (int)y] = point.Coordinate.Z;
-                          
+                        ZBuffer[(int)x, (int)y] = point.Coordinate.Z;                      
                         ColorBuffer.SetPixel((int)x, (int)y, point.Color);
                     }
                 }
